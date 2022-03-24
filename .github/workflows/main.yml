@@ -22,7 +22,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Install Azure Spring Cloud extension
-        run: az extension add -y –name spring-cloud
+        run: az extension add --name spring-cloud
       - name: Deploy to Azure Spring Cloud
         run: az spring-cloud app deploy --name apigateway --service azurespringboot2022  --resource-group AzureSpringBoot --jar-path target/api-gateway-0.0.1.jar
 
