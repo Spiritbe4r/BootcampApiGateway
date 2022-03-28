@@ -11,6 +11,15 @@ spring:
     name: api-gateway
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+        globalcors:
+          corsConfigurations:
+            '[/**]':
+              allowedOrigins: "*"
+              allowedMethods:
+                - GET
       routes:
         - id: client-microservice
           uri: lb://client-microservice
@@ -23,17 +32,17 @@ spring:
             - Path=/api/account/**
 
         - id: bankdeposit-microservice
-          uri: http://localhost:8083
+          uri: lb://bankdeposit-microservice
           predicates:
             - Path=/api/deposit/**
 
         - id: bankwithdrawal-microservice
-          uri: http://localhost:8084
+          uri: lb://bankwithdrawal-microservice
           predicates:
             - Path=/api/retire/**
 
-        - id: bankcredit-microservice
-          uri: lb://bankcredit-microservice
+        - id: credit-microservice
+          uri: lb://credit-microservice
           predicates:
             - Path=/api/credit/**
 
@@ -48,9 +57,20 @@ spring:
             - Path=/api/transaction/**
 
         - id: transfer-microservice
-          uri: http://localhost:8086
+          uri: lb://transfer-microservice
           predicates:
             - Path=/api/transfer/**
+
+        - id: productreport-microservice
+          uri: lb://productreport-microservice
+          predicates:
+            - Path=/api/report/**
+        - id: currentaccount-microservice
+          uri: lb://currentaccount-microservice
+          predicates:
+            - Path=/api/currentAccount/**
+
+
 
 
 
