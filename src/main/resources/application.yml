@@ -1,5 +1,5 @@
-server:
-  port: 8095
+#server:
+#  port: 8095
 
 eureka:
   client:
@@ -20,56 +20,56 @@ spring:
               allowedOrigins: "*"
               allowedMethods:
                 - GET
-      routes:
-        - id: client-microservice
-          uri: lb://client-microservice
-          predicates:
-            - Path=/api/client/**
-
-        - id: account-microservice
-          uri: lb://account-microservice
-          predicates:
-            - Path=/api/account/**
-
-        - id: bankdeposit-microservice
-          uri: lb://bankdeposit-microservice
-          predicates:
-            - Path=/api/deposit/**
-
-        - id: bankwithdrawal-microservice
-          uri: lb://bankwithdrawal-microservice
-          predicates:
-            - Path=/api/retire/**
-
-        - id: credit-microservice
-          uri: lb://credit-microservice
-          predicates:
-            - Path=/api/credit/**
-
-        - id: creditcard-microservice
-          uri: lb://creditcard-microservice
-          predicates:
-            - Path=/api/creditcard/**
-
-        - id: transaction-microservice
-          uri: lb://transaction-microservice
-          predicates:
-            - Path=/api/transaction/**
-
-        - id: transfer-microservice
-          uri: lb://transfer-microservice
-          predicates:
-            - Path=/api/transfer/**
-
-        - id: productreport-microservice
-          uri: lb://productreport-microservice
-          predicates:
-            - Path=/api/report/**
-        - id: currentaccount-microservice
-          uri: lb://currentaccount-microservice
-          predicates:
-            - Path=/api/currentAccount/**
-
+#      routes:
+#        - id: client-microservice
+#          uri: lb://client-microservice
+#          predicates:
+#            - Path=/api/client/**
+#
+#        - id: account-microservice
+#          uri: lb://account-microservice
+#          predicates:
+#            - Path=/api/account/**
+#
+#        - id: bankdeposit-microservice
+#          uri: lb://bankdeposit-microservice
+#          predicates:
+#            - Path=/api/deposit/**
+#
+#        - id: bankwithdrawal-microservice
+#          uri: lb://bankwithdrawal-microservice
+#          predicates:
+#            - Path=/api/retire/**
+#
+#        - id: credit-microservice
+#          uri: lb://credit-microservice
+#          predicates:
+#            - Path=/api/credit/**
+#
+#        - id: creditcard-microservice
+#          uri: lb://creditcard-microservice
+#          predicates:
+#            - Path=/api/creditcard/**
+#
+#        - id: transaction-microservice
+#          uri: lb://transaction-microservice
+#          predicates:
+#            - Path=/api/transaction/**
+#
+#        - id: transfer-microservice
+#          uri: lb://transfer-microservice
+#          predicates:
+#            - Path=/api/transfer/**
+#
+#        - id: productreport-microservice
+#          uri: lb://productreport-microservice
+#          predicates:
+#            - Path=/api/report/**
+#        - id: currentaccount-microservice
+#          uri: lb://currentaccount-microservice
+#          predicates:
+#            - Path=/api/currentAccount/**
+#
 
 
 
