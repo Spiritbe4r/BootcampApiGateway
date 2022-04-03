@@ -17,10 +17,11 @@ spring:
           enabled: true
 
       globalcors:
-        '[/**]':
-          allowedOrigin: "*"
-          allowedMethods:
-            - GET
+        corsConfigurations:
+          '[/**]':
+            allowedOrigin: "*"
+            allowedMethods:
+              - GET
 
 #server:
 #  port: 8095
