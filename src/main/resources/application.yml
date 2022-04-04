@@ -2,10 +2,10 @@
 #server:
 #  port: 8095
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
 
 spring:
   main:
@@ -22,6 +22,7 @@ spring:
             allowedOrigin: "*"
             allowedMethods:
               - GET
+              - POST
 
 #server:
 #  port: 8095
